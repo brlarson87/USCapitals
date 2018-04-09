@@ -96,6 +96,9 @@ function verifyGuess(e) {
     var guessIndex = this.index;
     if(guessValue === answers[guessIndex].toUpperCase()) {
       points++;
+      if(points === 50) {
+        showScoreModal();
+      }
       score.innerHTML = `${points}/50`;
       this.style.background = 'lightgreen';
       this.style.color = 'white';
@@ -124,6 +127,10 @@ function showScoreModal() {
 
 function closeModal() {
   document.getElementById('modal').style.display = 'none';
+  for(var i = 0; i < answerFields.length; i++) {
+    answerFields[i].disabled = true;
+  }
+
 }
 
 function refresh() {

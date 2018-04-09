@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  background: linear-gradient(to right, rgba(255,0,0, 0.9), white, rgba(0,0,255, 0.9));
+  background-image: url('./imgs/us-flag.png') no-repeat center center;
 }
 
 .container {
@@ -128,4 +128,19 @@ button#btn-end:hover {background: rgba(255, 0, 0, 0.7);}
 .modal-header h2 {
   text-align: center;
   padding: 15px 5px;
+}
+
+@media only screen and (max-width: 890px) {
+  .container {
+    height: 95vh
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .container {
+    height: 100vh
+  }
+  .input-container {
+    grid-template-columns: 50% 50%;
+  }
 }
